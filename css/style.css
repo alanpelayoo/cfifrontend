@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+html { 
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top: 6rem;
+}
+p{
+    font-size:2rem;
+    font-weight: 400;
+    color: white;
+    line-height: 140%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+}/* no se usa ahorita */
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+/* home */
+#home{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/home3.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    background-attachment:fixed; /*  efecto de que se come imagen */
+    z-index: 1;
+}
+
+#home::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+.home h1{
+    font-size: 6rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: white;
+}
+.home p{
+    margin-bottom: 3rem;
+    text-transform: none;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botones a{
+    color: white;
+    font-weight: 400;
+    font-size: 1.7rem;
+    border: 0.1rem solid white;
+    border-radius: 10rem;
+    padding: 1.5rem 4rem;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botones a div{
+    margin: .5rem;
+    align-items: center;
+    display: none;
+}
+.botones a ion-icon{
+    font-size: 2rem;
+}
+.botones .btn2 {
+    background-color: rgb(0, 100, 0,0.6);
+    border: none; 
+}
+
+.botones a:hover div{
+    display: flex;
+}
+
+/* end home section */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+.header .menu,.sub-menu{
+    display: flex;
+    width: 100%;
+}
+.header .sub-menu{
+    justify-content: flex-end;
+    padding: 1.5rem 5rem;
+    background-color: rgb(0, 100, 0,0.6);
+}
+.header .sub-menu .element{
+    margin-left: 4rem;
+    color: white;
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+}
+.header .sub-menu .element p{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+}
+
+.header .menu{
+    padding: 2rem 5rem;
+    align-items: center;
+    height: 90px;
+    
+}
+.header .logo{
+    width: 25%;
+    margin-right: auto;
+}
+.header .logo img{
+    width: 100%;
+}
+.header .navbar a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 3rem;
+}
+.header .navbar a:hover{
+    font-size: 210%; 
+    text-decoration: underline;
+}
+.header .menu ion-icon{
+    font-size: 3rem;
+    color: white;
+    margin-left: 3rem;
+    display: none;
+}
+.header ion-icon:hover{
+    font-size: 4rem;
+}
+
+/* media adapts */
+@media (max-width:800px){
+    section{
+        padding: 20px;
+        text-align: left;
+        align-items: flex-start;
+    }
+    #home{
+        height: 72vh;
+    }
+    .home h1{
+        font-size: 3.5em;
+        margin-bottom: 2rem;
+    }
+    .home p{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .botones{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .botones a{
+        font-size: 1.5rem;
+        border: 0.1rem solid white;
+        padding: .8rem;
+        margin: .8rem;
+        border-radius: 0;
+    }
+    .header .sub-menu{
+        display: none;
+    }
+    .header .menu{
+        padding: 2rem 1.5rem;
+        height: 100px;
+        background-color: rgb(0, 100, 0,0.6);
+    }
+    .header .logo img{
+        height: 50px;
+        width: auto;
+    }
+    .navbar {
+        display: none;
+    }
+    .header .menu ion-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+}
