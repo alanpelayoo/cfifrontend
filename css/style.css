@@ -17,6 +17,12 @@ html {
     scroll-behavior:smooth;
     scroll-padding-top: 6rem;
 }
+:root{
+    --black: #16161d;
+    --white: #fff;
+    --light-color: #808080;
+    --green-base:rgb(0, 100, 0);
+}
 p{
     font-size:2rem;
     font-weight: 400;
@@ -25,9 +31,9 @@ p{
 }
 .container{
     display: flex;
-    align-items: center;
+    align-items:left;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     flex-flow: column;
 }/* no se usa ahorita */
 
@@ -37,13 +43,13 @@ section{
     justify-content: center;
     flex-flow: column;
     text-align: center;
+    width: 100%;
 }
 /* home */
 #home{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
     background-image: url('/images/home3.jpg');
     background-size: cover;
     background-position: top center;
@@ -109,8 +115,10 @@ section{
 }
 
 /* end home section */
+
+/*header and navbar */
 .header{
-    position: fixed;
+    position:absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -174,6 +182,56 @@ section{
     font-size: 4rem;
 }
 
+/*header and navbar */
+/* about section  */
+
+#about{
+    padding: 5rem 9%;
+}
+
+#about .sect-container .image{
+    height: 40rem;
+}
+#about .sect-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#about .sect-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 2rem;
+}
+#about .sect-container .container p{
+    color: var(--light-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+}
+.heading{
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.sub-heading{
+    color: var(--green-base);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media adapts */
 @media (max-width:800px){
     section{
@@ -181,9 +239,11 @@ section{
         text-align: left;
         align-items: flex-start;
     }
-    #home{
-        height: 72vh;
+    .header{
+        position: fixed;
     }
+
+    
     .home h1{
         font-size: 3.5em;
         margin-bottom: 2rem;
@@ -240,6 +300,10 @@ section{
     }
     .header .menu .close_div{
         cursor: pointer;
+    }
+
+    #about .sect-container .image{
+        height: 25rem;
     }
     
 }
