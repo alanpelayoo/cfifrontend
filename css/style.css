@@ -2,8 +2,8 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -18,24 +18,42 @@ html {
     scroll-padding-top: 6rem;
 }
 :root{
-    --black: #16161d;
+    --black: rgb(22, 22, 29);
     --white: #fff;
     --light-color: #808080;
     --green-base:rgb(0, 100, 0);
+    --green-base-op:rgb(0, 100, 0,0.8);
 }
-p{
+
+
+.white-p{
     font-size:2rem;
     font-weight: 400;
     color: white;
     line-height: 140%;
 }
+.second-p{
+    font-weight: 400;
+    color: var(--light-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    line-height: 140%;
+}
+.second-heading{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
 .container{
     display: flex;
     align-items:left;
     justify-content: center;
     text-align: left;
     flex-flow: column;
-}/* no se usa ahorita */
+}
 
 section{
     display: flex;
@@ -69,12 +87,14 @@ section{
     opacity: .6;
     z-index: -1;
 }
+
 .home h1{
     font-size: 6rem;
     font-weight: 400;
     margin-bottom: 3rem;
     color: white;
 }
+
 .home p{
     margin-bottom: 3rem;
     text-transform: none;
@@ -150,6 +170,7 @@ section{
     padding: 2rem 5rem;
     align-items: center;
     height: 90px;
+    /* background: rgba(0,0,0,0.21); */
 }
 
 .header .logo{
@@ -160,6 +181,8 @@ section{
 .header .logo img{
     width: 100%;
 }
+
+
 .header .navbar a{
     font-size: 1.8rem;
     color: white;
@@ -185,8 +208,8 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about{
-    padding: 5rem 9%;
+#about,#services{
+    padding: 5rem 13%;
 }
 
 #about .sect-container .image{
@@ -202,16 +225,26 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
     gap: 2rem;
 }
-#about .sect-container .container p{
-    color: var(--light-color);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-transform: none;
-}
+
+
 .heading{
     font-size: 3rem;
     color: var(--black);
     margin-bottom: 1.5rem;
+    letter-spacing: .4rem;
+    font-weight: 500;
+}
+
+.heading2{
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: .4rem;
+    font-weight: 500;
+}
+.heading2 span{
+    color: var(--green-base);
+    font-weight: 800;
 }
 
 .sub-heading{
@@ -219,17 +252,98 @@ section{
     text-transform: uppercase;
 }
 
+/*Ends about and starts srvices*/
+#services .container-2{
+    display: flex;
+    width: 60%; 
+    flex-direction: column; 
+    margin-bottom: 30px;
+}
+#services .sect-container{
+    display: flex;
+    width: 100%;
+      
+}
+
+#services .sect-container .container{
+    width: 25%;
+    min-height: 240px;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+#services .sect-container .container:nth-child(odd){
+    background-color: var(--green-base);
+}
+#services .sect-container .container:nth-child(even){
+    background-color: #303842;
+}
+#services .sect-container .container .second-p{
+    color: white;
+}
+
+#services .sect-container .container .image{
+    height: 80px;
+    margin-bottom: 30px;
+}
+#services .sect-container .container .image img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    opacity: .95;
+}
 
 
 
-
-
-
-
-
-
-
-
+/*Ends services and starts semi*/
+#semi-sect{
+    min-height: 60vh;
+    width: 100%;
+    background-image: url('/images/values_opt3.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    background-attachment:fixed; /*  efecto de que se come imagen */
+    z-index: 1;
+    
+}
+#semi-sect::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    opacity: .8;
+    z-index: -1;
+}
+.col-container{
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    border: 2px solid black;
+    width: 100%;
+    padding: 5rem 9%;
+    min-height: 400px
+    
+}
+.col-container .container{
+    margin-right: 20px;
+    width: 350px;
+    border: 2px solid black;
+}
+.col-container p{
+    font-size: 1.8rem;
+}
+.col-container .container h2{
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
 
 /* media adapts */
@@ -243,7 +357,6 @@ section{
         position: fixed;
     }
 
-    
     .home h1{
         font-size: 3.5em;
         margin-bottom: 2rem;
@@ -293,7 +406,6 @@ section{
         margin-bottom: 2rem;
         color: white
     }
-
     .header .menu .toggle{
         display: block;
         cursor: pointer;
