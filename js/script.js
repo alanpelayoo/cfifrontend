@@ -20,7 +20,19 @@ close_div.addEventListener('click',()=>{
     close_div.style.display ='none';
 });
 
-
+window.addEventListener("scroll",() => {
+    if (mediaQuery.matches) {
+        if (window.scrollY > 472){
+            header.style.position = 'fixed';
+            sub_menu.style.display ='none';
+            menu.style.background = 'rgb(0, 100, 0)';/* rgb(22, 22, 29,.7)*/
+        }else{
+            sub_menu.style.display ='flex';
+            header.style.position = 'absolute';
+            menu.style.background = 'none';
+        };
+    };
+});
 
 
 

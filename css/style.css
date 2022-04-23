@@ -226,7 +226,7 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about,#services,#dependencias{
+#about,#dependencias{
     padding: 5rem 13%;
 }
 
@@ -242,7 +242,6 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
     gap: 2rem;
-    
     margin-bottom: 50px;
 }
 
@@ -284,11 +283,16 @@ section{
 }
 
 /*Ends about and starts srvices*/
+#services {
+    padding: 0;
+    padding-bottom: 5rem;
+}
 #services .container-2{
     display: flex;
-    width: 60%; 
+    width: 40%; 
     flex-direction: column; 
     margin-bottom: 30px;
+    
 }
 #services .sect-container{
     display: flex;
@@ -319,9 +323,7 @@ section{
 }
 
 
-#dependencias{
-    
-}
+
 
 /*Ends services and starts semi*/
 #semi-sect{
@@ -399,7 +401,7 @@ section{
 /* media adapts */
 @media (max-width:800px){
     section{
-        padding: 20px;
+        padding: 20px 60px ;
         text-align: left;
         align-items: flex-start;
     }
@@ -464,13 +466,13 @@ section{
     .header .menu .close_div{
         cursor: pointer;
     }
-
-    #about .sect-container .image{
+    
+    #about .sect-container .image-big{
         height: 25rem;
     }
     
     #services {
-        position: relative
+        position: relative;
     }
     #services .sect-container{
         flex-direction: column;
@@ -483,5 +485,6 @@ section{
     }
     #services .container-2{
         width: 100%;
+        padding: 20px 60px;
     }
 }
