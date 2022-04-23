@@ -51,6 +51,28 @@ html {
     text-align: left;
     flex-flow: column;
 }
+.container-center{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: left;
+    flex-flow: column;
+    padding-right: 10px;
+    
+    
+}
+.image{ /* 80px height */
+    margin-bottom: 30px;
+}
+
+.image img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.image:hover img{
+    transform: scale(1.2);
+}
 
 section{
     display: flex;
@@ -204,15 +226,14 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about,#services{
+#about,#services,#dependencias{
     padding: 5rem 13%;
 }
 
-#about .sect-container .image{
+#about .sect-container .image-big{
     height: 35rem;
-    
 }
-#about .sect-container .image img{
+#about .sect-container .image-big img{
     height: 100%;
     width: 90%;
     object-fit: cover;
@@ -221,6 +242,18 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
     gap: 2rem;
+    
+    margin-bottom: 50px;
+}
+
+
+#about .container-center:nth-child(-n+2){
+    border-right: 1px solid var(--black);
+}
+
+#about .sect-container .second-heading{
+    color: var(--black);
+    font-weight: 500;
 }
 
 
@@ -232,14 +265,8 @@ section{
     font-weight: 500;
 }
 
-.heading2{
-    font-size: 3.5rem;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    letter-spacing: .4rem;
-    font-weight: 500;
-}
-.heading2 span{
+
+.heading span{
     color: var(--green-base);
     font-weight: 800;
 }
@@ -253,6 +280,7 @@ section{
     color: white;
     font-size: 2.2rem;
     margin-bottom: 10px;
+    
 }
 
 /*Ends about and starts srvices*/
@@ -286,16 +314,14 @@ section{
     color: white;
 }
 
-#services .sect-container .container .image{ /* 80px height */
-    margin-bottom: 30px;
-}
 #services .sect-container .container .image img{
-    height: 100%;
-    width: auto;
-    object-fit: cover;
     opacity: .95;
 }
 
+
+#dependencias{
+    
+}
 
 /*Ends services and starts semi*/
 #semi-sect{
@@ -338,6 +364,9 @@ section{
     text-decoration: underline;
     color: white;
     align-items: center;
+}
+.blog a:hover{
+    transform: scale(1.2);
 }
 
 
@@ -421,11 +450,12 @@ section{
         align-items: center;
         justify-content: center;
     }
+    
 
     .header .navbar a{
         font-size: 3rem;
         margin-bottom: 2rem;
-        color: white
+        color: white;
     }
     .header .menu .toggle{
         display: block;
