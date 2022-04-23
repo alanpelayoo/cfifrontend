@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900');
+
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -40,11 +41,7 @@ html {
     text-transform: none;
     line-height: 140%;
 }
-.second-heading{
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
+
 
 
 .container{
@@ -146,13 +143,12 @@ section{
     display: flex;
     flex-direction: column;
 }
-.header .menu,.sub-menu{
-    display: flex;
-}
+
 .header .sub-menu{
     justify-content: flex-end;
     padding: 1.5rem 5rem;
     background-color: rgb(0, 100, 0,0.6);
+    display: flex;
 }
 .header .sub-menu .element{
     margin-left: 4rem;
@@ -170,11 +166,11 @@ section{
     padding: 2rem 5rem;
     align-items: center;
     height: 90px;
+    display: flex;
     /* background: rgba(0,0,0,0.21); */
 }
 
 .header .logo{
-    width: 25%;
     margin-right: auto;
 }
 
@@ -213,11 +209,12 @@ section{
 }
 
 #about .sect-container .image{
-    height: 40rem;
+    height: 35rem;
+    
 }
 #about .sect-container .image img{
     height: 100%;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
 }
 #about .sect-container{
@@ -228,7 +225,7 @@ section{
 
 
 .heading{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--black);
     margin-bottom: 1.5rem;
     letter-spacing: .4rem;
@@ -236,7 +233,7 @@ section{
 }
 
 .heading2{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--black);
     margin-bottom: 1.5rem;
     letter-spacing: .4rem;
@@ -250,6 +247,12 @@ section{
 .sub-heading{
     color: var(--green-base);
     text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.second-heading{
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 /*Ends about and starts srvices*/
@@ -261,8 +264,7 @@ section{
 }
 #services .sect-container{
     display: flex;
-    width: 100%;
-      
+    width: 100%;  
 }
 
 #services .sect-container .container{
@@ -284,8 +286,7 @@ section{
     color: white;
 }
 
-#services .sect-container .container .image{
-    height: 80px;
+#services .sect-container .container .image{ /* 80px height */
     margin-bottom: 30px;
 }
 #services .sect-container .container .image img{
@@ -296,18 +297,19 @@ section{
 }
 
 
-
 /*Ends services and starts semi*/
 #semi-sect{
-    min-height: 60vh;
+    min-height: 45vh;
     width: 100%;
-    background-image: url('/images/values_opt3.jpg');
+    background-image: url('/images/blog1.jpg');
     background-size: cover;
     background-position: top center;
     position: relative;
     background-attachment:fixed; /*  efecto de que se come imagen */
     z-index: 1;
-    
+    text-align: left;
+    align-items: flex-start;
+    padding: 5%;
 }
 #semi-sect::after{
     content: '';
@@ -320,7 +322,26 @@ section{
     opacity: .8;
     z-index: -1;
 }
-.col-container{
+
+.blog h3{
+    font-size: 3rem;
+    text-transform: none;
+}
+.blog p{
+    font-size: 2rem;
+    color: white;
+    text-transform: none;
+    margin-right: 10px;
+}
+.blog a{
+    display: flex;
+    text-decoration: underline;
+    color: white;
+    align-items: center;
+}
+
+
+/* .col-container{
     display: flex;
     justify-content: flex-start;
     text-align: left;
@@ -343,7 +364,7 @@ section{
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 10px;
-}
+} */
 
 
 /* media adapts */
@@ -381,7 +402,7 @@ section{
     }
     .header .menu{
         padding: 2rem 1.5rem;
-        background-color: rgb(0, 100, 0,0.9);
+        background-color: var(--green-base);
     }
     .header .logo img{
         height: 45px;
@@ -418,4 +439,19 @@ section{
         height: 25rem;
     }
     
+    #services {
+        position: relative
+    }
+    #services .sect-container{
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+    #services .sect-container .container{
+        width: 100%;
+        
+    }
+    #services .container-2{
+        width: 100%;
+    }
 }
