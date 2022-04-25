@@ -26,10 +26,12 @@ window.addEventListener("scroll",() => {
             header.style.position = 'fixed';
             sub_menu.style.display ='none';
             menu.style.background = 'rgb(0, 100, 0)';/* rgb(22, 22, 29,.7)*/
+            menu.style.boxShadow = 'rgba(0, 0, 0, 0.24) 0px 3px 8px';
         }else{
             sub_menu.style.display ='flex';
             header.style.position = 'absolute';
             menu.style.background = 'none';
+            menu.style.boxShadow = 'none'
         };
     };
 });
