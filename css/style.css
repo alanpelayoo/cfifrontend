@@ -644,5 +644,7 @@ section{
         box-shadow: none;
         padding: 25px;
     }
-
+    #contact .formBox .inputBox.w50{
+        width: 100%;
+    }
 }
