@@ -375,8 +375,7 @@ section{
 
 /* Contact form Starts*/
 #contact{
-    background-color: rgb(211,211,211);
-    
+    background-color: rgb(211,211,211); 
 }
 #contact .sect-container{
     position: relative;
@@ -540,7 +539,7 @@ section{
     }
 
     .home h1{
-        font-size: 3.5em;
+        font-size: 3.5rem;
         margin-bottom: 2rem;
     }
     .home p{
@@ -552,7 +551,7 @@ section{
         align-items: flex-start;
     }
     .botones a{
-        font-size: 1.5rem;
+        
         border: 0.1rem solid white;
         padding: .8rem;
         margin: .8rem;
@@ -619,4 +618,31 @@ section{
     #services .container-2{
         width: 100%;
     }
+    #contact .sect-container{
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow: 0 50px 25px rgba(0, 0, 0, 0.25);
+    }
+    #contact .sect-container .containerInfo{
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding: 25px;
+        top: 0;
+        align-items: flex-start;
+    }
+    #contact .sect-container .containerInfo .map{
+        display: none;
+    }
+    #contact .sect-container .containerForm{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 70px 50px;
+        margin-left: 0px;
+        box-shadow: none;
+        padding: 25px;
+    }
+
 }
