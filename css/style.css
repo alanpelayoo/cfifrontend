@@ -227,7 +227,7 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about,#dependencias,#services{
+#about,#dependencias,#services,#contact{
     padding: 5rem 9%;
 }
 
@@ -284,7 +284,9 @@ section{
 }
 
 /*Ends about and starts srvices*/
-
+#services,#contact{
+    min-height: 100vh;
+}
 #services .container-2{
     display: flex;
     width: 60%; 
@@ -314,6 +316,7 @@ section{
 }
 #services .sect-container .container .second-p{
     color: white;
+    font-weight: 300;
 }
 
 #services .sect-container .container .image img{
@@ -370,31 +373,160 @@ section{
 }
 
 
-/* .col-container{
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    border: 2px solid black;
-    width: 100%;
-    padding: 5rem 9%;
-    min-height: 400px
+/* Contact form Starts*/
+#contact{
+    background-color: rgb(211,211,211);
     
 }
-.col-container .container{
-    margin-right: 20px;
+#contact .sect-container{
+    position: relative;
+    width: 100%;
+    min-height: 507px;
+    z-index: 1;
+    text-align: left;
+}
+#contact .sect-container .containerInfo{
+    position: absolute;
+    top: 20px;
     width: 350px;
-    border: 2px solid black;
+    height: calc(100% - 40px);/* menos distancia de top8 calc(100% - 80px) */
+    background-color: #303842;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
-.col-container p{
-    font-size: 1.8rem;
+#contact .containerInfo ul.info{
+    position: relative;
 }
-.col-container .container h2{
-    color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-} */
+#contact .containerInfo ul.info li{
+    list-style: none;
+    display: flex;
+    margin: 5px 0;
+    position: relative;
+    cursor: pointer;
+    align-items: flex-start;
+}
+#contact .containerInfo .map{
+    width: 100%;
+    height: 36%;
+}
 
+#contact .containerInfo .map iframe{
+    width: 100%;
+    height: 100%;    
+}
+#contact .containerInfo .info li ion-icon{
+    color: white;
+    font-size: 3rem;
+}
+#contact .second-p{
+    color: white;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 300;
+}
+#contact .sect-container .containerForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background-color: var(--light-bg);
+    box-shadow: 0 50px 25px rgba(0, 0, 0, 0.25);
+}
+
+#contact .containerForm .second-heading{
+    color: var(--black);
+}
+#contact .containerForm .second-p{
+    color: var(--black);
+}
+
+
+#contact .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+#contact .formBox .inputBox{
+    position: relative;
+    margin-bottom: 30px;   
+}
+#contact .formBox .inputBox.w50{
+    width: 47%;
+}
+#contact .formBox .inputBox.w100{
+    width: 100%;
+}
+
+#contact .formBox .inputBox input,
+#contact .formBox .inputBox textarea
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #303842;
+    background-color: var(--light-bg);
+}
+
+#contact .formBox .inputBox textarea
+{
+    height: 120px;
+}
+#contact .formBox .inputBox span
+{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+}
+
+#contact .formBox .inputBox input:focus ~span,
+#contact .formBox .inputBox input:valid ~span,
+#contact .formBox .inputBox textarea:focus ~span,
+#contact .formBox .inputBox textarea:valid ~span
+{
+    transform: translateY(-2.4rem);
+}
+
+#contact .formBox .inputBox input:focus ~span p,
+:valid ~span p,
+#contact .formBox .inputBox textarea:focus ~span p,
+#contact .formBox .inputBox textarea:valid ~span p
+{
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: var(--green-base);
+
+}
+#contact .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background:#303842;
+    color:white;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    border-radius: 40px;
+}
+#contact .formBox .inputBox input[type="submit"]:hover{
+    color:black;
+    border: 1px solid #303842;
+    background: none;
+}
+/* Contact form Ends*/
 
 /* media adapts */
 @media (max-width:800px){
