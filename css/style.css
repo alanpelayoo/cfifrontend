@@ -25,6 +25,7 @@ html {
     --green-base:rgb(0, 100, 0);
     --green-base-op:rgb(0, 100, 0,0.8);
     --light-bg: #f5f5f8;
+    --white-litebg:rgb(211,211,211);
 }
 
 
@@ -72,6 +73,10 @@ html {
     object-fit: cover;
 }
 .image:hover img{
+    transform: scale(1.2);
+}
+
+a:hover{
     transform: scale(1.2);
 }
 
@@ -227,8 +232,9 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about,#dependencias,#services,#contact{
+#about,#dependencias,#services,#contact,#footer{
     padding: 5rem 9%;
+    
 }
 
 #about .sect-container .image-big{
@@ -368,14 +374,11 @@ section{
     color: white;
     align-items: center;
 }
-.blog a:hover{
-    transform: scale(1.2);
-}
 
 
 /* Contact form Starts*/
 #contact{
-    background-color: rgb(211,211,211); 
+    background-color: var(--white-litebg) 
 }
 #contact .sect-container{
     position: relative;
@@ -525,8 +528,65 @@ section{
     border: 1px solid #303842;
     background: none;
 }
-/* Contact form Ends*/
 
+/* Contact form Ends*/
+#footer{
+    background-color: white; 
+    padding-bottom: 0;
+}
+
+#footer .sect-container{
+    display: flex;
+    width: 100%;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 25px;
+}
+#footer .container{
+    margin-left: 6rem;
+}
+#footer .container:nth-child(1){
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#footer .second-heading{
+    font-size: 1.8rem;
+    color: var(--green-base);
+}
+#footer .container .element{
+    display: flex;
+    align-items: center;
+}
+#footer p{
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform:none;
+    margin-bottom: 2rem;
+}
+
+#footer .caption{
+    border-top: 1px solid var(--black);
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    
+}
+
+
+.socials{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.socials ion-icon{
+    font-size: 3rem;
+    color: var(--black);
+    margin-right: 2rem;
+    
+}
 /* media adapts */
 @media (max-width:800px){
     section{
@@ -646,5 +706,18 @@ section{
     }
     #contact .formBox .inputBox.w50{
         width: 100%;
+    }
+
+    #footer .sect-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer .sect-container .container{
+        margin-bottom: 3rem;
+        text-align: left;
+        width: 100%;
+        margin-left: 0;
+        
     }
 }
