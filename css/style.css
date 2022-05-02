@@ -38,7 +38,7 @@ html {
 .second-p{
     font-weight: 400;
     color: var(--light-color);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
     text-transform: none;
     line-height: 140%;
@@ -232,9 +232,8 @@ section{
 /*header and navbar */
 /* about section  */
 
-#about,#dependencias,#services,#contact,#footer{
+#about,#dependencias,#services,#contact,#footer,#semi-sect{
     padding: 5rem 9%;
-    
 }
 
 #about .sect-container .image-big{
@@ -343,8 +342,8 @@ section{
     background-attachment:fixed; /*  efecto de que se come imagen */
     z-index: 1;
     text-align: left;
-    align-items: flex-start;
-    padding: 5%;
+    align-items: flex-end;
+    
 }
 #semi-sect::after{
     content: '';
